@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Koushik Krishnan</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</description>
+    <description>Welcome to Koushik Krishnan&#39;s page! A simple site to showcase all the random things I do in my free time. It&#39;s always nice to look back on these endeavors and who knows, maybe all of this will be helpful to someone someday. Take care!</description>
     <link>http://koek67.github.io/</link>
     <atom:link href="http://koek67.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Nov 2014 01:38:56 -0500</pubDate>
-    <lastBuildDate>Mon, 24 Nov 2014 01:38:56 -0500</lastBuildDate>
+    <pubDate>Tue, 02 Dec 2014 00:55:34 -0500</pubDate>
+    <lastBuildDate>Tue, 02 Dec 2014 00:55:34 -0500</lastBuildDate>
     <generator>Jekyll v2.5.1</generator>
     
       <item>
@@ -74,6 +73,117 @@ in the YouTube video I followed but it works. Have fun and be safe!&lt;/p&gt;
         <pubDate>Sat, 12 Apr 2014 13:21:14 -0400</pubDate>
         <link>http://koek67.github.io/projects/2014/04/12/microwave-welder.html</link>
         <guid isPermaLink="true">http://koek67.github.io/projects/2014/04/12/microwave-welder.html</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>Benford&#39;s Law Simulation</title>
+        <description>&lt;p&gt;Github: &lt;a href=&quot;https://github.com/koek67/benfords-law-viewer&quot;&gt;Benford’s Law Viewer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For me, one of the biggest advantages that computer science gives me is the ability to test out peculiar mathematical
+paradoxes and theorems in code and see them work in action, rather than just in a proof. One of the ways I found this useful
+was when I decided to test Benford’s Law. I was inspired to do this after watching the Numberphile
+&lt;a href=&quot;https://www.youtube.com/watch?v=XXjlR2OK1kM&quot;&gt;video&lt;/a&gt; on the topic. The theory seemed a bit hard to believe so I decided to see
+if I could replicate its results in code.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-bit-of-background&quot;&gt;A Bit of Background&lt;/h3&gt;
+
+&lt;p&gt;So what is Benford’s Law? It’s a mathematical principle that says that if you take the numbers you find in the real world, this
+could mean numbers from stock prices, sports scores, report cards etc., that the probability that the leading digit will be 1 is
+about 30%. Normally one might think that the probability should be 11% assuming that each number has an equal probability of being
+a leading digit. To be more specific, the distribution of the probabilities looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.dropbox.com/s/yllv44j5hqc6aeo/benford3.jpg?dl=1&quot; alt=&quot;Benford&#39;s Law&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In essence what Benford’s Law is saying is that if you obtain a large set of numbers curated from your environment, a seemingly random
+set of data, 30% of those numbers will have 1 as their leading digit.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-does-this-happen&quot;&gt;Why does this happen?&lt;/h3&gt;
+
+&lt;p&gt;The reason for this is that numbers in the real world are not totally random. For exmaple lets imagine that all numbers
+in the world were between 1 and 1000. Using a random number generator its easy to say that the probability of getting one
+number is about the same as getting another. But let’s look at this as if this were the prices of objects. If an object costs
+$100, it would require a 100% increase to have a leading digit of 2. This would mean that something in the environment must cause this
+object’s price to double, an event that is relatively unlikely. But let’s assume that this happens and the object now costs
+$200. In order for it to have a leading digit of 3, it would require a 50% increase. As you can see, it is easier for the price of this object to leave the leading digit of 2 and move to a leading digit of 3 than it is to move from a 1 to a 2. Here is a table to better explain this:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Leading Digit Transition&lt;/th&gt;
+      &lt;th&gt;Percentage Change Required&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1 -&amp;gt; 2&lt;/td&gt;
+      &lt;td&gt;100%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2 -&amp;gt; 3&lt;/td&gt;
+      &lt;td&gt;50%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3 -&amp;gt; 4&lt;/td&gt;
+      &lt;td&gt;33.33%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4 -&amp;gt; 5&lt;/td&gt;
+      &lt;td&gt;25%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5 -&amp;gt; 6&lt;/td&gt;
+      &lt;td&gt;20%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6 -&amp;gt; 7&lt;/td&gt;
+      &lt;td&gt;16.66%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7 -&amp;gt; 8&lt;/td&gt;
+      &lt;td&gt;14.3%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8 -&amp;gt; 9&lt;/td&gt;
+      &lt;td&gt;12.5%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9 -&amp;gt; 1&lt;/td&gt;
+      &lt;td&gt;11.1%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Since the transition from 1 -&amp;gt; 2 requires the greatest percentage increase, it makes sense that numbers in the real word tend
+to stay in the range where the leading digit is 1 because it is the hardest to escape this region. In addition, since the required percentage increase decreases for every
+subsequent transition, it means that it becomes increasingly easier to return back to a leading digit of one.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-program&quot;&gt;The Program&lt;/h3&gt;
+
+&lt;p&gt;The program I wrote to simulate this was written in Java using good ol’ Swing graphics (function over form, my friends).
+The issue I had to figure out was how to recreate “real world” numbers. While generating random numbers was easy, how could I
+generate numbers that model those found around us. The solution I found for this was to generate random numbers with random
+ranges. In code, it would look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Random numGen = new Random();
+numGen.nextInt(numGen.nextInt(numGen.nextInt(1000000)));
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;My program can simulate a standard set of random numbers as well as random numbers with random ranges. In addition, I added a
+box where a user can enter a set of numbers separated by spaces and view the distribution of leading digits in the set. I tried
+this out with world population data, stock prices I found on Yahoo Finance and to my surprise both data sets matched Benford’s Law.&lt;/p&gt;
+
+&lt;p&gt;All my code is on github (link is above) and the runnable jar is inside the repository for you to play around with. Have fun!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.dropbox.com/s/674wtht2ugwa8af/Screenshot%202014-11-27%2007.27.38.png?dl=1&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 02 Jun 2013 13:21:14 -0400</pubDate>
+        <link>http://koek67.github.io/projects/2013/06/02/benfords-law-simulation.html</link>
+        <guid isPermaLink="true">http://koek67.github.io/projects/2013/06/02/benfords-law-simulation.html</guid>
         
         
         <category>projects</category>
